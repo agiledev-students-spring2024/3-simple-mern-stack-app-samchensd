@@ -78,5 +78,25 @@ app.post('/messages/save', async (req, res) => {
   }
 })
 
+app.get('/about-us', (req, res) => {
+  res.setHeader('Content-Type', 'application/json');
+  //  "About Us" content
+  const aboutUsContent = {
+    title: "About Us",
+    content: `Hey there! I'm Sam Chen, a tech enthusiast and a problem-solver at heart, currently navigating the exciting world of Computer Science and Business Administration at New York University, aiming to graduate in January 2025. My academic journey is fueled by a curiosity for everything at the intersection of technology and business, with a GPA of 3.7 to show for my efforts. When I'm not buried in coursework related to AI, machine learning, or data analysis, I'm probably brainstorming the next big idea or figuring out how technology can make our lives just a bit easier.
+
+My internship experiences have been a roller coaster of learning and hands-on involvement, from leading a team at Microsoft to develop a QR Code generator for a design app to enhancing the user experience for eSports enthusiasts at Mobalytics. Each role taught me the importance of listening, whether it's to a teammate's idea or a user's feedback, and the power of a well-laid plan, from product development to go-to-market strategies.
+
+But here's the thing—I'm not all work and no play. Outside the hustle of tech and business, you'll find me on the basketball court leading my team as captain or planning my next backpacking adventure in places as rugged and awe-inspiring as Death Valley. These experiences ground me, teaching me lessons in leadership, teamwork, and perseverance that I bring back to my professional life.
+
+In the tech world, I'm passionate about making things that matter and resonate with people. Whether it's through coding, designing, or strategizing, the goal is to leave things a little better than I found them. And when the going gets tough, you might catch me creating music or sharing my latest finds on my YouTube channel, finding joy in the simple act of creation.
+
+So, that's a little about me—a mix of tech geek, outdoor enthusiast, and aspiring creator, always looking to learn and grow. Let's see where this journey takes us!`,
+    imageUrl: "https://media.licdn.com/dms/image/D4E03AQEdqwJM__mAMw/profile-displayphoto-shrink_400_400/0/1662511996165?e=1713398400&v=beta&t=eYF5WFzvenEBml2l4lNlHsaNlglcd_LmyLrv2KLEH0k"
+  };
+  res.json(aboutUsContent);
+});
+
+
 // export the express app we created to make it available to other modules
 module.exports = app // CommonJS export style!
